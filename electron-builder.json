@@ -1,0 +1,36 @@
+{
+    "appId": "pl.com.maple.reactelectronapp",
+    "productName": "Change me",
+    "publish": null,
+    "directories": {
+      "output": "builds"
+    },
+    "files": [
+      "electron.js",
+      "preload.js",
+      "dist/**/*"
+    ],
+    "win": {
+      "target": [
+        "nsis"
+      ],
+      "artifactName": "${productName}-v${version}-setup-${os}-${arch}.${ext}"
+    },
+    "mac": {
+      "target": [
+        "dmg"
+      ],
+      "artifactName": "${productName}-v${version}-setup-${os}-${arch}.${ext}"
+    },
+    "nsis": {
+      "oneClick": false,
+      "perMachine": true,
+      "allowToChangeInstallationDirectory": true,
+      "deleteAppDataOnUninstall": true,
+      "createDesktopShortcut": true,
+      "createStartMenuShortcut": true
+    },
+    "msi": {
+      "warningsAsErrors": false
+    }
+  }
